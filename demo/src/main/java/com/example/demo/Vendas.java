@@ -2,9 +2,6 @@ package com.example.demo;
 
 import java.sql.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
-import com.example.repositorio.VendasRepo;
-
 public class Vendas {
     private Long vendaID;
     private Date dataVenda;
@@ -12,12 +9,9 @@ public class Vendas {
     private Long vendedorID;
     private String vendedorNome;
 
-    @Autowired
-    private VendasRepo vendasRepo;
-
-    public void gravarNovaVenda(String newValor, Long newVendedorID, String newVendedorNome) {
+    public void gravarNovaVenda(String newValor, Long vendedorID2, String newVendedorNome) {
         this.valor = newValor;
-        this.vendedorID = newVendedorID;
+        this.vendedorID = vendedorID2;
         this.vendedorNome = newVendedorNome;
     }
 
